@@ -6,19 +6,6 @@ import json
 import string
 import random
 
-# data = pd.read_excel('DS_KHACH_MOI.xlsx')
-# df = pd.DataFrame(data)
-
-# for i in range(len(df)):
-#     url = 'http://127.0.0.1:88/?name='+str(df.iloc[i]['name'])+'&call='+str(df.iloc[i]['call'])+'&time='+str(df.iloc[i]['time'])
-#     qr = qrcode.QRCode(
-#         version=1,
-#         box_size=10,
-#         border=5)
-#     qr.add_data(url)
-#     qr.make(fit=True)
-#     img = qr.make_image(fill='black', back_color='white')
-#     img.save('qrcode{}.png'.format(i))
 
 class CreateDatabase:
     def __init__(self) -> None:
@@ -27,7 +14,7 @@ class CreateDatabase:
         self.connection_db = sqlite3.connect(self.database, check_same_thread=False)
         self.cursor = self.connection_db.cursor()
         # URL path
-        self.url = 'http://10.91.13.88:88/?id='
+        self.url = 'http://192.168.1.22/?id='
         # Path to QR folder
         self.qr_folder = os.path.join('statics', 'images', 'qr')
         if not os.path.exists(self.qr_folder):
