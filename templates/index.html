@@ -29,7 +29,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
+        <a href="#" class="navbar-brand d-block d-lg-none">
             <h1 class="font-secondary text-white mb-n2">Thanh Giảng <span class="text-primary">&</span> Bích Ngân</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -42,14 +42,14 @@
                 <a href="#story" class="nav-item nav-link">Story</a>
                 <a href="#gallery" class="nav-item nav-link">Gallery</a>
             </div>
-            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+            <a href="#" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Thanh Giảng <span class="text-primary">&</span> Bích Ngân</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <!-- <a href="#family" class="nav-item nav-link">Family</a> -->
-                <a href="#event" class="nav-item nav-link">Event</a>
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#party" class="nav-item nav-link">Party</a>
+                <a href="#maps" class="nav-item nav-link">maps</a>
+                <a href="#join" class="nav-item nav-link">Join</a>
             </div>
         </div>
     </nav>
@@ -66,43 +66,17 @@
                         <div class="p-3" style="max-width: 1200px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Thanh Giảng & Bích Ngân</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                {% if data %}
-                                    <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Kính mời {{ data.call }} <b>{{ data.name }}</b> vào lúc {{ data.time }} ngày {{ data.date }} đến dự tiệc đám cưới của THẾ ANH & THỊ B tại Landmark 81.</h3>
-                                {% endif %}
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Tháng 3 năm 2023</h3>
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;" id="timer"></h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                data-src="https://www.youtube.com/embed/WN64v62I6aQ" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jack & Rose</h1>
-                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
-                            </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-            <!-- <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
-                    <span class="carousel-control-prev-icon mt-3"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
-                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
-                    <span class="carousel-control-next-icon mt-3"></span>
-                </div>
-            </a> -->
         </div>
     </div>
     <!-- Carousel End -->
@@ -286,26 +260,16 @@
 
 
     <!-- Event Start -->
-    <div class="container-fluid py-5" id="event">
+    <div class="container-fluid py-5" id="party">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Party</h6>
                 <h1 class="font-secondary display-4">Our Wedding Event</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h5 class="font-weight-normal text-muted mb-3 pb-3">Tiệc cưới của Thanh Giảng & Bích Ngân được tổ chức ngày tháng 3 năm 2023 (nhằm ngày tháng 2 âm lịch) tại tư gia.</h5>
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%C4%90H%2045,%20Long%20Ph%C3%BA,%20Tam%20B%C3%ACnh,%20V%C4%A9nh%20Long,%20Vi%E1%BB%87t%20Nam&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <!-- <a href="https://2piratebay.org"></a> -->
-                            <br>
-                            <!-- <style>.mapouter{position:relative;height:500px;width:900px;}</style> -->
-                            <!-- <a href="https://www.embedgooglemap.net">embedgooglemap.net</a> -->
-                            <!-- <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:900px;}</style> -->
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -314,46 +278,29 @@
 
 
     <!-- Friends & Family Start -->
-    <div class="container-fluid py-5" id="family">
+    <div class="container-fluid py-5" id="maps">
         <div class="container pt-5 pb-3">
-            <div class="section-title position-relative text-center" id="countdown">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Countdown</h6>
-                <script>
-                    function countdown(){
-                        let theDate = new Date('Dec 31, 2022 11:00:00').getTime()
-                        
-                        let x = setInterval(function () {
-                            let now = new Date().getTime();
-
-                            let distance = theDate - now;
-
-                            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            document.getElementById('countdown').innerHTML = '<h1 class="font-secondary display-4" id="countdown">'+days + ' ngày ' + hours + ' giờ ' + minutes + ' phút'+'</h1>';
-
-                            if(distance < 0){
-                                clearInterval(x);
-                            }
-                        }, 1000);
-                    }
-                </script>
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Maps</h6>
+                <h1 class="font-secondary display-4">Bản đồ</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            
-            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <iframe width="550" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%C4%90H%2045,%20Long%20Ph%C3%BA,%20Tam%20B%C3%ACnh,%20V%C4%A9nh%20Long,%20Vi%E1%BB%87t%20Nam&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <br>
+                </div>
+            </div>            
         </div>
     </div>
     <!-- Friends & Family End -->
 
 
     <!-- RSVP Start -->
-    <div class="container-fluid py-5" id="rsvp">
+    <div class="container-fluid py-5" id="join">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Xác nhận tham dự</h6>
                 <h1 class="font-secondary display-4">Join Our Party</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
@@ -362,33 +309,9 @@
                     <div class="text-center">
                         <form>
                             <div class="form-row">
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-sm-12">
                                     <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
-                                <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>Number of Guest</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>I'm Attending</option>
-                                        <option>All Events</option>
-                                        <option>Wedding Party</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
@@ -410,15 +333,13 @@
                 <i class="far fa-heart text-white"></i>
             </div>
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/giangpt2808"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/giangpt.vlg/"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="d-flex justify-content-center py-2">
                 <p class="text-white" href="#">giangpt@duck.com</p>
                 <span class="px-3">|</span>
-                <p class="text-white" href="#">(84) 9123 123 123</p>
+                <p class="text-white" href="call:0914747190">(84) 91 4747 190</p>
             </div>
             <!-- <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
             </p> -->
@@ -433,7 +354,35 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 5, 2023 00:00:00").getTime();
+  
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+  
+          // Get today's date and time
+          var now = new Date().getTime();
+  
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+  
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+          // Display the result in the element with id="timer"
+          document.getElementById("timer").innerHTML = days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+  
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
