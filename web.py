@@ -1,7 +1,6 @@
 import pandas as pd
 import json
 import os
-import uvicorn
 import sqlite3
 
 # from starlette.requests import Request
@@ -49,10 +48,7 @@ class Website:
                 return self.templates.TemplateResponse('index.html', context={'request': request})
 
 
-web = Website()
 
 if __name__=="__main__":
-    # config = uvicorn.Config("web:web.app", host="0.0.0.0", port=88)
-    # server = uvicorn.Server(config)
-    # server.run()
-    uvicorn.run("web:web.app", host='0.0.0.0', port=10000)
+    web = Website()
+    web.app.run()
