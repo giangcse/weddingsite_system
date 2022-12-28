@@ -14,9 +14,9 @@ class CreateDatabase:
         self.connection_db = sqlite3.connect(self.database, check_same_thread=False)
         self.cursor = self.connection_db.cursor()
         # URL path
-        self.url = 'http://192.168.1.22/?id='
+        self.url = 'https://giang-ngan.com/?id='
         # Path to QR folder
-        self.qr_folder = os.path.join('statics', 'images', 'qr')
+        self.qr_folder = os.path.join('qrcode')
         if not os.path.exists(self.qr_folder):
             os.makedirs(self.qr_folder)
 
@@ -26,8 +26,8 @@ class CreateDatabase:
         ------------
         Tạo ID ngẫu nhiên cho URL
         '''
-        number_of_string = 10
-        ID = ''.join(random.choices(string.ascii_uppercase + string.digits, k = number_of_string))  
+        number_of_string = 4
+        ID = ''.join(random.choices(string.ascii_lowercase + string.digits, k = number_of_string))  
         result = self.cursor.execute('SELECT COUNT(ID) FROM data WHERE ID = ?', (ID,))
         if(int(result.fetchone()[0])==0):
             return ID
