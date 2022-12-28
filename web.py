@@ -55,4 +55,4 @@ if __name__=="__main__":
     # config = uvicorn.Config("web:web.app", host="0.0.0.0", port=88)
     # server = uvicorn.Server(config)
     # server.run()
-    uvicorn.run("web:web.app", host='0.0.0.0', port=80)
+    uvicorn.run("web:web.app", host='0.0.0.0')
