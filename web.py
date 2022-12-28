@@ -49,6 +49,4 @@ class Website:
 
 
 
-if __name__=="__main__":
-    web = Website()
-    web.app.run()
+web = Website()
